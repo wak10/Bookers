@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   def new
+    @top = Book.new
   end
 
   def edit
