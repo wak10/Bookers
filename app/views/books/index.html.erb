@@ -10,15 +10,12 @@
   </thead>
   <tbody>
     <tr>
-      <td>トラブル知らずのシステム設計</td>
-      <td>システム設計の要点を図解で説明してくれます</td>
-      <td><a class="show_27165" href="/books/27165">Show</a></td>
-      <td><a class="edit_27165" href="/books/27165/edit">Edit</a></td>
-      <td>
-      <a data-confirm="Are you sure?" class="destroy_27165" rel="nofollow" data-method="delete" href="/books/27165">Destroy</a>
-      </td>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
-
   </tbody>
 </table>
 <% end %>
@@ -46,8 +43,9 @@
   <%= f.text_field :title %>
   <h4>Body</h4>
   <%= f.text_area :body %>
+  <p>
   <%= f.submit 'create Book' %>
-
+  </p>
   <% end %>
 
 
