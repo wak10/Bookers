@@ -8,20 +8,22 @@ class BooksController < ApplicationController
 
   def new
 
+    @book=Book.new
+
   end
 
   def edit
   end
 
   def create
-    list = List.new(list_params)
-    list.save
-    redirect_to '/top'
+    book = Book.new(book_params)
+    book.save
+    redirect_to 'index'
   end
 
   private
 
-  def list_params
-    params.require(:list).permit(:title, :body)
+  def book_params
+    params.require(:book).permit(:title, :body)
   end
 end
