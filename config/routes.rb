@@ -4,9 +4,6 @@ Rails.application.routes.draw do
 
   root to: 'books#top'
 
-  get 'index' => 'books#index'
-
-  post 'index' => 'books#create'
 
   resources :books
 
